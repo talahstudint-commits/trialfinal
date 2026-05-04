@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>الأدوات الصحية</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+:root{
+--primary:#16a34a;
+--dark:#0f172a;
+--muted:#64748b;
+--glass:rgba(255,255,255,.78);
+}
+
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+font-family:'Cairo',sans-serif;
+min-height:100vh;
+padding:18px;
+color:var(--dark);
+background:
+radial-gradient(circle at top right,rgba(34,197,94,.22),transparent 35%),
+radial-gradient(circle at bottom left,rgba(20,184,166,.16),transparent 35%),
+linear-gradient(180deg,#f8fafc,#ecfdf5);
+}
+
+.page{max-width:800px;margin:auto;}
+
+.top{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:16px;
+}
+
+.brand{
+display:flex;
+align-items:center;
+gap:10px;
+font-weight:800;
+font-size:20px;
+}
+
+.brand img{
+width:50px;
+height:50px;
+border-radius:14px;
+}
+
+.back{
+width:42px;
+height:42px;
+border-radius:50%;
+background:#fff;
+display:flex;
+align-items:center;
+justify-content:center;
+text-decoration:none;
+color:var(--dark);
+box-shadow:0 8px 18px rgba(0,0,0,.08);
+}
+
+.hero{
+background:var(--glass);
+backdrop-filter:blur(12px);
+border-radius:26px;
+padding:22px;
+margin-bottom:16px;
+box-shadow:0 15px 30px rgba(0,0,0,.08);
+text-align:center;
+}
+
+.hero h1{
+font-size:28px;
+margin-bottom:6px;
+}
+
+.hero p{
+color:var(--muted);
+font-size:14px;
+line-height:1.7;
+}
+
+.section-title{
+font-size:19px;
+margin:18px 0 10px;
+font-weight:800;
+}
+
+.card{
+background:var(--glass);
+backdrop-filter:blur(10px);
+border-radius:20px;
+padding:18px;
+margin-bottom:12px;
+box-shadow:0 10px 25px rgba(0,0,0,.06);
+}
+
+.card h3{
+font-size:18px;
+margin-bottom:8px;
+display:flex;
+align-items:center;
+gap:8px;
+}
+
+.card h3 i{
+color:var(--primary);
+}
+
+.input-group{
+margin-bottom:12px;
+}
+
+.input-group label{
+font-size:13px;
+font-weight:800;
+color:#334155;
+}
+
+input,select{
+width:100%;
+padding:13px;
+border-radius:14px;
+border:1px solid #dbe2ea;
+margin-top:6px;
+font-family:'Cairo',sans-serif;
+font-size:15px;
+outline:none;
+background:white;
+}
+
+input:focus,select:focus{
+border-color:var(--primary);
+box-shadow:0 0 0 3px rgba(22,163,74,.12);
+}
+
+button{
+width:100%;
+padding:14px;
+border:none;
+border-radius:16px;
+background:var(--primary);
+color:white;
+font-family:'Cairo',sans-serif;
+font-size:15px;
+font-weight:800;
+cursor:pointer;
+transition:.25s;
+}
+
+button:hover{
+transform:translateY(-3px);
+box-shadow:0 10px 20px rgba(22,163,74,.2);
+}
+
+.result{
+margin-top:12px;
+padding:14px;
+border-radius:16px;
+background:#dcfce7;
+color:#14532d;
+font-weight:800;
+line-height:1.8;
+text-align:center;
+}
+
+.tools-grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:10px;
+}
+
+.tool-link{
+background:#fff;
+border-radius:16px;
+padding:14px;
+text-decoration:none;
+color:var(--dark);
+box-shadow:0 8px 18px rgba(0,0,0,.04);
+transition:.25s;
+display:flex;
+align-items:center;
+gap:8px;
+font-size:13px;
+font-weight:800;
+line-height:1.5;
+}
+
+.tool-link:hover{
+transform:translateY(-3px);
+background:#f0fdf4;
+}
+
+.tool-link i{
+color:var(--primary);
+}
+
+.note{
+font-size:12px;
+color:var(--muted);
+line-height:1.7;
+text-align:center;
+margin-top:10px;
+}
+
+.back-main{
+display:flex;
+justify-content:center;
+align-items:center;
+gap:8px;
+margin-top:18px;
+padding:14px;
+background:var(--dark);
+color:white;
+border-radius:18px;
+text-decoration:none;
+font-weight:800;
+}
+
+@media(max-width:650px){
+.hero h1{font-size:24px;}
+.tools-grid{grid-template-columns:1fr;}
+}
+</style>
+</head>
+
+<body>
+
+<div class="page">
+
+<div class="top">
+<div class="brand">
+<img src="meras.jpeg" alt="شعار ممشى الحياة">
+<span>ممشى الحياة</span>
+</div>
+
+<a href="index.html" class="back">
+<i class="fas fa-arrow-right"></i>
+</a>
+</div>
+
+<section class="hero">
+<h1>الأدوات الصحية</h1>
+</section>
+
+<h2 class="section-title">أدوات داخل الموقع</h2>
+
+<div class="card">
+<h3><i class="fas fa-weight-scale"></i> حساب مؤشر كتلة الجسم BMI</h3>
+
+<div class="input-group">
+<label>الوزن بالكيلو</label>
+<input type="number" id="bmiWeight" placeholder="مثال: 55">
+</div>
+
+<div class="input-group">
+<label>الطول بالسنتيمتر</label>
+<input type="number" id="bmiHeight" placeholder="مثال: 165">
+</div>
+
+<button onclick="calculateBMI()">احسب BMI</button>
+
+<div class="result" id="bmiResult">النتيجة ستظهر هنا</div>
+</div>
+
+<div class="card">
+<h3><i class="fas fa-fire"></i> حاسبة السعرات التقريبية</h3>
+
+<div class="input-group">
+<label>مدة المشي بالدقائق</label>
+<input type="number" id="calMinutes" placeholder="مثال: 20">
+</div>
+
+<div class="input-group">
+<label>مستوى المشي</label>
+<select id="calEffort">
+<option value="light">خفيف</option>
+<option value="medium">متوسط</option>
+<option value="high">سريع / عالي</option>
+</select>
+</div>
+
+<button onclick="calculateCalories()">احسب السعرات</button>
+
+<div class="result" id="calResult">السعرات ستظهر هنا</div>
+</div>
+
+<div class="card">
+<h3><i class="fas fa-shoe-prints"></i> تقدير الخطوات</h3>
+
+<div class="input-group">
+<label>مدة المشي بالدقائق</label>
+<input type="number" id="stepMinutes" placeholder="مثال: 15">
+</div>
+
+<button onclick="calculateSteps()">احسب الخطوات</button>
+
+<div class="result" id="stepResult">الخطوات ستظهر هنا</div>
+</div>
+
+<h2 class="section-title">أدوات وزارة الصحة</h2>
+
+<div class="tools-grid">
+
+<a class="tool-link" target="_blank" href="https://www.moh.gov.sa/HealthAwareness/MedicalTools/Pages/Diabetes-Campaign-Tool.aspx">
+<i class="fas fa-arrow-up-right-from-square"></i>
+أداة تقييم احتمالية الإصابة بمضاعفات السكري
+</a>
+
+<a class="tool-link" target="_blank" href="https://www.moh.gov.sa/HealthAwareness/MedicalTools/Pages/EatingDisorderTest.aspx">
+<i class="fas fa-arrow-up-right-from-square"></i>
+اختبار اضطراب الأكل
+</a>
+
+<a class="tool-link" target="_blank" href="https://www.moh.gov.sa/HealthAwareness/MedicalTools/Pages/AsthmaControlTest.aspx">
+<i class="fas fa-arrow-up-right-from-square"></i>
+اختبار التحكم بالربو
+</a>
+
+<a class="tool-link" target="_blank" href="https://www.moh.gov.sa/HealthAwareness/MedicalTools/Pages/VisualAcuityTest.aspx">
+<i class="fas fa-arrow-up-right-from-square"></i>
+اختبار النظر
+</a>
+
+<a class="tool-link" target="_blank" href="https://www.moh.gov.sa/healthawareness/medicaltools/pages/prediabetes-risk-test.aspx">
+<i class="fas fa-arrow-up-right-from-square"></i>
+اختبار خطر الإصابة بمرحلة ما قبل السكري
+</a>
+
+<a class="tool-link" target="_blank" href="https://www.moh.gov.sa/HealthAwareness/MedicalTools/Pages/WaterCalculator.aspx">
+<i class="fas fa-arrow-up-right-from-square"></i>
+حساب احتياج البالغين للماء
+</a>
+
+<a class="tool-link" target="_blank" href="https://www.moh.gov.sa/HealthAwareness/MedicalTools/Pages/PregnancyDateCalculator.aspx">
+<i class="fas fa-arrow-up-right-from-square"></i>
+حساب التاريخ المناسب للحمل
+</a>
+
+<a class="tool-link" target="_blank" href="https://www.moh.gov.sa/healthawareness/medicaltools/pages/caloriecalculate.aspx">
+<i class="fas fa-arrow-up-right-from-square"></i>
+حساب السعرات الحرارية
+</a>
+
+<a class="tool-link" target="_blank" href="https://www.moh.gov.sa/HealthAwareness/MedicalTools/Pages/PregnancyDueDateCalculator.aspx">
+<i class="fas fa-arrow-up-right-from-square"></i>
+حساب الموعد التقريبي للولادة
+</a>
+
+<a class="tool-link" target="_blank" href="https://www.moh.gov.sa/HEALTHAWARENESS/MEDICALTOOLS/Pages/IdealBodyWeight.aspx">
+<i class="fas fa-arrow-up-right-from-square"></i>
+حساب الوزن المثالي
+</a>
+
+<a class="tool-link" target="_blank" href="https://www.moh.gov.sa/healthawareness/medicaltools/pages/bodymassindex.aspx">
+<i class="fas fa-arrow-up-right-from-square"></i>
+حساب مؤشر كتلة الجسم
+</a>
+
+<a class="tool-link" target="_blank" href="https://www.moh.gov.sa/HealthAwareness/MedicalTools/Pages/HajjHealthChecklist.aspx">
+<i class="fas fa-arrow-up-right-from-square"></i>
+قائمة الاستعدادات الصحية للحاج
+</a>
+
+<a class="tool-link" target="_blank" href="https://www.moh.gov.sa/HealthAwareness/MedicalTools/Pages/Nomophobia.aspx">
+<i class="fas fa-arrow-up-right-from-square"></i>
+نوموفوبيا
+</a>
+
+<a class="tool-link" target="_blank" href="https://www.moh.gov.sa/HealthAwareness/MedicalTools/Pages/depressiontest.aspx">
+<i class="fas fa-arrow-up-right-from-square"></i>
+هل تعاني من الاكتئاب؟
+</a>
+
+<a class="tool-link" target="_blank" href="https://www.moh.gov.sa/healthawareness/medicaltools/pages/anxiety.aspx">
+<i class="fas fa-arrow-up-right-from-square"></i>
+هل تعاني من القلق؟
+</a>
+
+<a class="tool-link" target="_blank" href="https://www.moh.gov.sa/HealthAwareness/MedicalTools/Pages/SleepAssessment.aspx">
+<i class="fas fa-arrow-up-right-from-square"></i>
+هل تعاني من مشاكل في النوم؟
+</a>
+
+</div>
+
+<div class="note">
+الأدوات الخارجية تفتح موقع وزارة الصحة الرسمي. بعض الروابط قد تتغير من الوزارة لاحقًا.
+</div>
+
+<a href="index.html" class="back-main">
+<i class="fas fa-arrow-right"></i>
+العودة للرئيسية
+</a>
+
+</div>
+
+<script>
+function calculateBMI(){
+let weight = Number(document.getElementById("bmiWeight").value);
+let height = Number(document.getElementById("bmiHeight").value);
+let result = document.getElementById("bmiResult");
+
+if(weight <= 0 || height <= 0){
+result.innerHTML = "الرجاء إدخال الوزن والطول بشكل صحيح";
+return;
+}
+
+let heightM = height / 100;
+let bmi = weight / (heightM * heightM);
+let rounded = bmi.toFixed(1);
+
+let category = "";
+
+if(bmi < 18.5){
+category = "نحافة";
+}
+else if(bmi < 25){
+category = "وزن طبيعي";
+}
+else if(bmi < 30){
+category = "زيادة وزن";
+}
+else{
+category = "سمنة";
+}
+
+result.innerHTML =
+"مؤشر كتلة الجسم: " + rounded + "<br>" +
+"التصنيف: " + category;
+}
+
+function calculateCalories(){
+let minutes = Number(document.getElementById("calMinutes").value);
+let effort = document.getElementById("calEffort").value;
+let result = document.getElementById("calResult");
+
+if(minutes <= 0){
+result.innerHTML = "الرجاء إدخال مدة صحيحة";
+return;
+}
+
+let rate = 5;
+
+if(effort === "light"){
+rate = 4;
+}
+else if(effort === "medium"){
+rate = 5;
+}
+else{
+rate = 7;
+}
+
+let calories = Math.round(minutes * rate);
+
+result.innerHTML = "السعرات التقريبية: " + calories + " سعرة";
+}
+
+function calculateSteps(){
+let minutes = Number(document.getElementById("stepMinutes").value);
+let result = document.getElementById("stepResult");
+
+if(minutes <= 0){
+result.innerHTML = "الرجاء إدخال مدة صحيحة";
+return;
+}
+
+let steps = Math.round(minutes * 110);
+
+result.innerHTML =
+"الخطوات التقريبية: " + steps + " خطوة<br>" +
+"التقدير مبني على متوسط 100–120 خطوة لكل دقيقة.";
+}
+</script>
+
+</body>
+</html>

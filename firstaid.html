@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>الإسعافات الأولية</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+:root{
+--primary:#16a34a;
+--danger:#dc2626;
+--dark:#0f172a;
+--muted:#64748b;
+--glass:rgba(255,255,255,.86);
+}
+
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+font-family:'Cairo',sans-serif;
+padding:18px;
+background:linear-gradient(180deg,#f8fafc,#ecfdf5);
+color:var(--dark);
+}
+
+.page{max-width:780px;margin:auto;}
+
+.top{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:16px;
+}
+
+.brand{
+display:flex;
+align-items:center;
+gap:10px;
+font-weight:800;
+}
+
+.brand img{
+width:50px;height:50px;border-radius:14px;
+}
+
+.back{
+width:42px;height:42px;border-radius:50%;
+background:#fff;
+display:flex;align-items:center;justify-content:center;
+text-decoration:none;color:var(--dark);
+box-shadow:0 8px 18px rgba(0,0,0,.08);
+}
+
+.hero{
+background:linear-gradient(135deg,#dc2626,#ef4444);
+color:white;
+padding:20px;
+border-radius:22px;
+text-align:center;
+margin-bottom:16px;
+}
+
+.section-title{
+font-size:18px;
+font-weight:800;
+margin:18px 0 10px;
+}
+
+/* dropdown */
+.dropdown{
+background:var(--glass);
+border-radius:18px;
+margin-bottom:10px;
+overflow:hidden;
+box-shadow:0 10px 20px rgba(0,0,0,.06);
+}
+
+.dropdown-btn{
+width:100%;
+padding:14px;
+border:none;
+background:none;
+display:flex;
+justify-content:space-between;
+font-family:'Cairo';
+font-weight:800;
+cursor:pointer;
+}
+
+.dropdown-content{
+max-height:0;
+overflow:hidden;
+transition:.3s;
+padding:0 14px;
+}
+
+.dropdown.active .dropdown-content{
+max-height:600px;
+padding:14px;
+}
+
+.photo{
+width:100%;
+border-radius:14px;
+margin-bottom:10px;
+}
+
+.tip{
+font-size:13px;
+line-height:1.7;
+background:#f8fafc;
+padding:10px;
+border-radius:12px;
+}
+
+.back-main{
+display:flex;
+justify-content:center;
+align-items:center;
+margin-top:20px;
+padding:14px;
+background:var(--dark);
+color:white;
+border-radius:16px;
+text-decoration:none;
+font-weight:800;
+}
+</style>
+</head>
+
+<body>
+
+<div class="page">
+
+<div class="top">
+<div class="brand">
+<img src="meras.jpeg">
+<span>ممشى الحياة</span>
+</div>
+
+<a href="index.html" class="back">
+<i class="fas fa-arrow-right"></i>
+</a>
+</div>
+
+<div class="hero">
+<h2>الإسعافات الأولية</h2>
+<p>تصرف بسرعة في الحالات الطارئة</p>
+</div>
+
+<!-- حالات طارئة -->
+<div class="section-title">🚨 حالات طارئة</div>
+
+<div class="dropdown">
+<button class="dropdown-btn" onclick="toggle(this)">الإغماء</button>
+<div class="dropdown-content">
+<img src="fainting.jpeg" class="photo">
+<div class="tip">ارفع قدميه وتأكد من التنفس.</div>
+</div>
+</div>
+
+
+
+<div class="dropdown">
+<button class="dropdown-btn" onclick="toggle(this)">CPR</button>
+<div class="dropdown-content">
+<img src="cpr.jpeg" class="photo">
+<div class="tip">30 ضغطة + 2 نفس.</div>
+</div>
+</div>
+
+<div class="dropdown">
+<button class="dropdown-btn" onclick="toggle(this)">النزيف</button>
+<div class="dropdown-content">
+<img src="bleeding.jpeg" class="photo">
+<div class="tip">اضغط مباشرة.</div>
+</div>
+</div>
+
+<div class="dropdown">
+<button class="dropdown-btn" onclick="toggle(this)">الاختناق</button>
+<div class="dropdown-content">
+<img src="choking.jpeg" class="photo">
+<div class="tip">Heimlich.</div>
+</div>
+</div>
+
+<div class="dropdown">
+<button class="dropdown-btn" onclick="toggle(this)">فقدان الوعي</button>
+<div class="dropdown-content">
+<img src="unconscious.jpeg" class="photo">
+<div class="tip">تحقق من التنفس.</div>
+</div>
+</div>
+
+<!-- إصابات -->
+<div class="section-title">🩹 إصابات</div>
+
+<div class="dropdown"><button class="dropdown-btn" onclick="toggle(this)">جروح</button><div class="dropdown-content"><img src="wound.jpeg" class="photo"><div class="tip">نظف وغط.</div></div></div>
+
+<div class="dropdown"><button class="dropdown-btn" onclick="toggle(this)">خدوش</button><div class="dropdown-content"><img src="scratch.jpeg" class="photo"><div class="tip">ماء وتنظيف.</div></div></div>
+
+<div class="dropdown"><button class="dropdown-btn" onclick="toggle(this)">كدمات</button><div class="dropdown-content"><img src="bruise.jpeg" class="photo"><div class="tip">كمادات باردة.</div></div></div>
+
+<div class="dropdown"><button class="dropdown-btn" onclick="toggle(this)">التواء</button><div class="dropdown-content"><img src="sprain.jpeg" class="photo"><div class="tip">راحة + ثلج.</div></div></div>
+
+<div class="dropdown"><button class="dropdown-btn" onclick="toggle(this)">كسور</button><div class="dropdown-content"><img src="fracture.jpeg" class="photo"><div class="tip">تثبيت.</div></div></div>
+
+<div class="dropdown"><button class="dropdown-btn" onclick="toggle(this)">حروق</button><div class="dropdown-content"><img src="burn.jpeg" class="photo"><div class="tip">ماء بارد.</div></div></div>
+
+<div class="dropdown"><button class="dropdown-btn" onclick="toggle(this)">ضربة شمس</button><div class="dropdown-content"><img src="heat.jpeg" class="photo"><div class="tip">مكان بارد + ماء.</div></div></div>
+
+<!-- حالات مفاجئة -->
+<div class="section-title">⚠️ حالات مفاجئة</div>
+
+<div class="dropdown"><button class="dropdown-btn" onclick="toggle(this)">انخفاض السكر</button><div class="dropdown-content"><img src="sugar-low.jpeg" class="photo"><div class="tip">سكر سريع.</div></div></div>
+
+<div class="dropdown"><button class="dropdown-btn" onclick="toggle(this)">ارتفاع السكر</button><div class="dropdown-content"><img src="sugar-high.jpeg" class="photo"><div class="tip">ماء.</div></div></div>
+
+<div class="dropdown"><button class="dropdown-btn" onclick="toggle(this)">ربو</button><div class="dropdown-content"><img src="asthma.jpeg" class="photo"><div class="tip">بخاخ.</div></div></div>
+
+<div class="dropdown"><button class="dropdown-btn" onclick="toggle(this)">نوبة قلبية</button><div class="dropdown-content"><img src="heart.jpeg" class="photo"><div class="tip">اتصل بالإسعاف فورًا.</div></div></div>
+
+<!-- إنعاش -->
+<div class="section-title">❤️ إنعاش</div>
+
+<div class="dropdown"><button class="dropdown-btn" onclick="toggle(this)">CPR</button><div class="dropdown-content"><img src="cpr.jpeg" class="photo"><div class="tip">ابدأ فورًا.</div></div></div>
+
+<a href="index.html" class="back-main">العودة للرئيسية</a>
+
+</div>
+
+<script>
+function toggle(btn){
+btn.parentElement.classList.toggle("active");
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>احسب صحتك</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+:root{
+--primary:#16a34a;
+--dark:#0f172a;
+--muted:#64748b;
+--glass:rgba(255,255,255,.78);
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Cairo', sans-serif;
+min-height:100vh;
+color:var(--dark);
+padding:18px;
+background:
+radial-gradient(circle at top right, rgba(34,197,94,.2), transparent 35%),
+radial-gradient(circle at bottom left, rgba(20,184,166,.16), transparent 35%),
+linear-gradient(180deg,#f8fafc,#ecfdf5);
+}
+
+.page{
+max-width:760px;
+margin:auto;
+}
+
+.top{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:16px;
+}
+
+.brand{
+display:flex;
+align-items:center;
+gap:10px;
+font-weight:800;
+font-size:20px;
+}
+
+.brand img{
+width:50px;
+height:50px;
+border-radius:14px;
+}
+
+.back-small{
+width:42px;
+height:42px;
+border-radius:50%;
+background:#fff;
+display:flex;
+align-items:center;
+justify-content:center;
+text-decoration:none;
+color:var(--dark);
+box-shadow:0 8px 18px rgba(0,0,0,.08);
+}
+
+.hero{
+background:var(--glass);
+backdrop-filter:blur(12px);
+border-radius:26px;
+padding:22px;
+margin-bottom:16px;
+box-shadow:0 15px 30px rgba(0,0,0,.08);
+}
+
+.badge{
+display:inline-flex;
+align-items:center;
+gap:6px;
+background:#dcfce7;
+color:#15803d;
+padding:6px 12px;
+border-radius:999px;
+font-size:12px;
+font-weight:800;
+margin-bottom:12px;
+}
+
+.hero h1{
+font-size:28px;
+margin-bottom:6px;
+}
+
+.hero p{
+color:var(--muted);
+font-size:14px;
+line-height:1.6;
+}
+
+.card{
+background:var(--glass);
+backdrop-filter:blur(10px);
+border-radius:20px;
+padding:18px;
+margin-bottom:12px;
+box-shadow:0 10px 25px rgba(0,0,0,.06);
+}
+
+.label{
+font-weight:800;
+color:var(--primary);
+margin-bottom:10px;
+display:flex;
+align-items:center;
+gap:6px;
+}
+
+.input-group{
+margin-bottom:12px;
+}
+
+.input-group label{
+font-size:13px;
+font-weight:700;
+color:#334155;
+}
+
+input,
+select{
+width:100%;
+padding:13px;
+border-radius:14px;
+border:1px solid #dbe2ea;
+margin-top:6px;
+font-family:'Cairo', sans-serif;
+font-size:15px;
+outline:none;
+background:white;
+}
+
+input:focus,
+select:focus{
+border-color:var(--primary);
+box-shadow:0 0 0 3px rgba(22,163,74,.12);
+}
+
+button{
+width:100%;
+margin-top:8px;
+padding:13px;
+border:none;
+border-radius:14px;
+background:var(--primary);
+color:white;
+font-family:'Cairo', sans-serif;
+font-size:15px;
+font-weight:800;
+cursor:pointer;
+transition:.25s;
+}
+
+button:hover{
+transform:translateY(-3px);
+box-shadow:0 10px 20px rgba(22,163,74,.2);
+}
+
+.result{
+margin-top:14px;
+padding:14px;
+border-radius:16px;
+background:#dcfce7;
+text-align:center;
+font-weight:800;
+color:#14532d;
+line-height:1.8;
+}
+
+.note{
+font-size:12px;
+color:#64748b;
+margin-top:8px;
+line-height:1.6;
+}
+
+.category{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:10px;
+}
+
+.box{
+background:#fff;
+border-radius:16px;
+padding:14px;
+box-shadow:0 8px 18px rgba(0,0,0,.04);
+}
+
+.box h3{
+font-size:15px;
+margin-bottom:5px;
+color:var(--dark);
+}
+
+.box p{
+font-size:12px;
+color:var(--muted);
+line-height:1.6;
+}
+
+.back{
+display:flex;
+justify-content:center;
+align-items:center;
+gap:8px;
+margin-top:20px;
+padding:14px;
+background:var(--dark);
+color:white;
+border-radius:18px;
+text-decoration:none;
+font-weight:800;
+}
+
+@media(max-width:600px){
+.hero h1{
+font-size:24px;
+}
+
+.category{
+grid-template-columns:1fr;
+}
+}
+</style>
+</head>
+
+<body>
+
+<div class="page">
+
+<div class="top">
+<div class="brand">
+<img src="meras.jpeg" alt="شعار ممشى الحياة">
+<span>ممشى الحياة</span>
+</div>
+
+<a href="path.html" class="back-small">
+<i class="fas fa-arrow-right"></i>
+</a>
+</div>
+
+<section class="hero">
+<div class="badge">
+<i class="fas fa-calculator"></i>
+احسب صحتك
+</div>
+
+<h1>مؤشر كتلة الجسم BMI</h1>
+<p>احسب مؤشر كتلة جسمك بشكل بسيط، وتعرف على معنى النتيجة مع نصيحة مناسبة.</p>
+</section>
+
+<div class="card">
+<div class="label">
+<i class="fas fa-weight-scale"></i>
+حاسبة BMI
+</div>
+
+<div class="input-group">
+<label>الجنس</label>
+<select id="gender">
+<option value="female">أنثى</option>
+<option value="male">ذكر</option>
+</select>
+</div>
+
+<div class="input-group">
+<label>الوزن بالكيلو</label>
+<input type="number" id="weight" placeholder="مثال: 55">
+</div>
+
+<div class="input-group">
+<label>الطول بالسنتيمتر</label>
+<input type="number" id="height" placeholder="مثال: 165">
+</div>
+
+<button onclick="calculateBMI()">احسب النتيجة</button>
+
+<div class="result" id="result">النتيجة ستظهر هنا</div>
+</div>
+
+<div class="card">
+<div class="label">
+<i class="fas fa-chart-simple"></i>
+تفسير النتائج
+</div>
+
+<div class="category">
+
+<div class="box">
+<h3>أقل من 18.5</h3>
+<p>نحافة: يحتاج الجسم إلى تغذية أفضل وزيادة صحية في الوزن.</p>
+</div>
+
+<div class="box">
+<h3>18.5 - 24.9</h3>
+<p>وزن طبيعي: حافظ على نشاطك ونمطك الغذائي المتوازن.</p>
+</div>
+
+<div class="box">
+<h3>25 - 29.9</h3>
+<p>زيادة وزن: حاول زيادة الحركة وتقليل الأطعمة العالية بالسعرات.</p>
+</div>
+
+<div class="box">
+<h3>30 أو أكثر</h3>
+<p>سمنة: يُفضل تحسين العادات اليومية واستشارة مختص عند الحاجة.</p>
+</div>
+
+</div>
+</div>
+
+<div class="card">
+<div class="label">
+<i class="fas fa-lightbulb"></i>
+ملاحظة مهمة
+</div>
+<p style="color:#64748b; line-height:1.7; font-size:14px;">
+مؤشر BMI يعطي فكرة عامة فقط، ولا يحدد صحتك بالكامل. الحساب لا يختلف بين الذكر والأنثى، لكن النصيحة قد تختلف حسب طبيعة الجسم ونسبة العضلات والدهون.
+</p>
+</div>
+
+<a href="path.html" class="back">
+<i class="fas fa-arrow-right"></i>
+العودة للمسار
+</a>
+
+</div>
+
+<script>
+function calculateBMI(){
+let gender = document.getElementById("gender").value;
+let weight = document.getElementById("weight").value;
+let height = document.getElementById("height").value;
+let result = document.getElementById("result");
+
+if(weight === "" || height === "" || weight <= 0 || height <= 0){
+result.innerHTML = "الرجاء إدخال الوزن والطول بشكل صحيح";
+return;
+}
+
+let heightInMeters = height / 100;
+let bmi = weight / (heightInMeters * heightInMeters);
+let roundedBMI = bmi.toFixed(1);
+
+let category = "";
+let advice = "";
+
+if(bmi < 18.5){
+category = "نحافة";
+
+if(gender === "female"){
+advice = "نصيحتك: اهتمي بزيادة السعرات من مصادر صحية مثل البروتين، المكسرات، الحليب، والوجبات المتوازنة.";
+}else{
+advice = "نصيحتك: ركّز على زيادة الكتلة العضلية بتمارين المقاومة مع وجبات غنية بالبروتين.";
+}
+}
+
+else if(bmi >= 18.5 && bmi < 25){
+category = "وزن طبيعي";
+
+if(gender === "female"){
+advice = "نصيحتك: حافظي على التوازن بين التغذية، الحركة اليومية، وشرب الماء.";
+}else{
+advice = "نصيحتك: حافظ على نشاطك ووازن بين تمارين القوة والمشي والتغذية الجيدة.";
+}
+}
+
+else if(bmi >= 25 && bmi < 30){
+category = "زيادة وزن";
+
+if(gender === "female"){
+advice = "نصيحتك: ابدئي بزيادة المشي اليومي وتقليل السكريات والمشروبات المحلاة تدريجيًا.";
+}else{
+advice = "نصيحتك: زد نشاطك اليومي وركز على تقليل الوجبات السريعة مع ممارسة تمارين منتظمة.";
+}
+}
+
+else{
+category = "سمنة";
+
+if(gender === "female"){
+advice = "نصيحتك: ابدئي بخطوات بسيطة مثل المشي المنتظم وتنظيم الوجبات، واستشيري مختصًا عند الحاجة.";
+}else{
+advice = "نصيحتك: ابدأ بتقليل السعرات تدريجيًا وزيادة الحركة اليومية، واستشر مختصًا إذا احتجت خطة مناسبة.";
+}
+}
+
+result.innerHTML =
+"مؤشر كتلة الجسم: " + roundedBMI + "<br>" +
+"التصنيف: " + category + "<br>" +
+advice +
+"<div class='note'>⚠️ هذا المؤشر تقريبي ولا يعكس نسبة الدهون أو العضلات بدقة.</div>";
+}
+</script>
+
+</body>
+</html>

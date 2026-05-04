@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>الطوارئ</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+:root{
+--primary:#16a34a;
+--danger:#dc2626;
+--dark:#0f172a;
+--muted:#64748b;
+--glass:rgba(255,255,255,.78);
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Cairo', sans-serif;
+min-height:100vh;
+color:var(--dark);
+padding:18px;
+background:
+radial-gradient(circle at top right, rgba(220,38,38,.16), transparent 35%),
+radial-gradient(circle at bottom left, rgba(34,197,94,.18), transparent 35%),
+linear-gradient(180deg,#f8fafc,#ecfdf5);
+}
+
+.page{
+max-width:760px;
+margin:auto;
+}
+
+.top{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:16px;
+}
+
+.brand{
+display:flex;
+align-items:center;
+gap:10px;
+font-weight:800;
+font-size:20px;
+}
+
+.brand img{
+width:50px;
+height:50px;
+border-radius:14px;
+}
+
+.back-small{
+width:42px;
+height:42px;
+border-radius:50%;
+background:#fff;
+display:flex;
+align-items:center;
+justify-content:center;
+text-decoration:none;
+color:var(--dark);
+box-shadow:0 8px 18px rgba(0,0,0,.08);
+}
+
+.hero{
+background:var(--glass);
+backdrop-filter:blur(12px);
+border-radius:26px;
+padding:22px;
+margin-bottom:16px;
+box-shadow:0 15px 30px rgba(0,0,0,.08);
+}
+
+.badge{
+display:inline-flex;
+align-items:center;
+gap:6px;
+background:#fee2e2;
+color:#b91c1c;
+padding:6px 12px;
+border-radius:999px;
+font-size:12px;
+font-weight:800;
+margin-bottom:12px;
+}
+
+.hero h1{
+font-size:28px;
+margin-bottom:6px;
+}
+
+.hero p{
+color:var(--muted);
+font-size:14px;
+line-height:1.6;
+}
+
+.emergency-box{
+background:linear-gradient(135deg,#dc2626,#ef4444);
+color:white;
+border-radius:22px;
+padding:18px;
+margin-bottom:14px;
+box-shadow:0 14px 28px rgba(220,38,38,.18);
+}
+
+.emergency-box h2{
+font-size:20px;
+margin-bottom:10px;
+display:flex;
+align-items:center;
+gap:8px;
+}
+
+.numbers{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:10px;
+}
+
+.number-card{
+background:rgba(255,255,255,.18);
+border-radius:16px;
+padding:12px;
+text-align:center;
+}
+
+.number-card span{
+display:block;
+font-size:13px;
+opacity:.9;
+}
+
+.number-card strong{
+font-size:24px;
+}
+
+.accordion{
+display:flex;
+flex-direction:column;
+gap:12px;
+}
+
+.dropdown{
+background:var(--glass);
+backdrop-filter:blur(10px);
+border-radius:20px;
+box-shadow:0 10px 25px rgba(0,0,0,.06);
+overflow:hidden;
+}
+
+.dropdown-btn{
+width:100%;
+border:none;
+background:transparent;
+padding:16px;
+font-family:'Cairo', sans-serif;
+font-size:16px;
+font-weight:800;
+color:var(--dark);
+display:flex;
+align-items:center;
+justify-content:space-between;
+cursor:pointer;
+}
+
+.dropdown-title{
+display:flex;
+align-items:center;
+gap:8px;
+}
+
+.dropdown-title i{
+color:var(--danger);
+}
+
+.dropdown-btn .chevron{
+transition:.25s;
+color:var(--muted);
+}
+
+.dropdown.active .chevron{
+transform:rotate(180deg);
+}
+
+.dropdown-content{
+max-height:0;
+overflow:hidden;
+transition:max-height .35s ease;
+padding:0 16px;
+}
+
+.dropdown.active .dropdown-content{
+max-height:600px;
+padding:0 16px 16px;
+}
+
+.photo-card{
+background:#fff;
+padding:10px;
+border-radius:18px;
+margin-bottom:12px;
+box-shadow:0 8px 18px rgba(0,0,0,.05);
+}
+
+.photo-card img{
+width:100%;
+height:auto;
+object-fit:contain;
+border-radius:14px;
+display:block;
+}
+
+.dropdown-content p{
+font-size:13px;
+color:var(--muted);
+line-height:1.7;
+margin-bottom:8px;
+}
+
+.tip{
+background:#f8fafc;
+border-radius:14px;
+padding:12px;
+font-size:13px;
+color:#334155;
+line-height:1.7;
+}
+
+.back{
+display:flex;
+justify-content:center;
+align-items:center;
+gap:8px;
+margin-top:20px;
+padding:14px;
+background:var(--dark);
+color:white;
+border-radius:18px;
+text-decoration:none;
+font-weight:800;
+}
+
+@media(max-width:600px){
+.hero h1{
+font-size:24px;
+}
+
+.numbers{
+grid-template-columns:1fr 1fr;
+}
+
+.number-card strong{
+font-size:22px;
+}
+}
+</style>
+</head>
+
+<body>
+
+<div class="page">
+
+<div class="top">
+<div class="brand">
+<img src="meras.jpeg" alt="شعار ممشى الحياة">
+<span>ممشى الحياة</span>
+</div>
+
+<a href="path.html" class="back-small">
+<i class="fas fa-arrow-right"></i>
+</a>
+</div>
+
+<section class="hero">
+<div class="badge">
+<i class="fas fa-triangle-exclamation"></i>
+قسم الطوارئ
+</div>
+
+<h1>إرشادات الطوارئ</h1>
+</section>
+
+<section class="emergency-box">
+<h2><i class="fas fa-phone-volume"></i> أرقام الطوارئ</h2>
+
+<div class="numbers">
+<div class="number-card">
+<span>الإسعاف</span>
+<strong>997</strong>
+</div>
+
+<div class="number-card">
+<span>الدفاع المدني</span>
+<strong>998</strong>
+</div>
+
+<div class="number-card">
+<span>الشرطة</span>
+<strong>999</strong>
+</div>
+
+<div class="number-card">
+<span>الطوارئ الموحد</span>
+<strong>911</strong>
+</div>
+</div>
+</section>
+
+<div class="accordion">
+
+<div class="dropdown">
+<button class="dropdown-btn" onclick="toggleDrop(this)">
+<span class="dropdown-title">
+<i class="fas fa-person-falling"></i>
+حالات الإغماء
+</span>
+<i class="fas fa-chevron-down chevron"></i>
+</button>
+
+<div class="dropdown-content">
+<div class="photo-card">
+<img src="fainting.jpeg" alt="حالات الإغماء">
+</div>
+
+<p>عند الإغماء، ساعد الشخص على الاستلقاء في مكان آمن، وارفع قدميه قليلًا إذا أمكن.</p>
+
+<div class="tip">
+اتصل بالإسعاف فورًا إذا لم يستعد الشخص وعيه بسرعة، أو كان لديه ألم صدر، صعوبة تنفس، أو إصابة بعد السقوط.
+</div>
+</div>
+</div>
+
+<div class="dropdown">
+<button class="dropdown-btn" onclick="toggleDrop(this)">
+<span class="dropdown-title">
+<i class="fas fa-bandage"></i>
+الجروح والإصابات الشائعة
+</span>
+<i class="fas fa-chevron-down chevron"></i>
+</button>
+
+<div class="dropdown-content">
+<div class="photo-card">
+<img src="injuries.jpeg" alt="الجروح والإصابات الشائعة">
+</div>
+
+<p>في الجروح البسيطة، اغسل المنطقة بلطف، واضغط بقطعة نظيفة لإيقاف النزيف، ثم غطِّ الجرح.</p>
+
+<div class="tip">
+اطلب المساعدة الطبية إذا كان النزيف شديدًا، أو الجرح عميقًا، أو الإصابة في الرأس، أو لا تستطيع تحريك الطرف المصاب.
+</div>
+</div>
+</div>
+
+<div class="dropdown">
+<button class="dropdown-btn" onclick="toggleDrop(this)">
+<span class="dropdown-title">
+<i class="fas fa-heart-pulse"></i>
+النوبة القلبية
+</span>
+<i class="fas fa-chevron-down chevron"></i>
+</button>
+
+<div class="dropdown-content">
+<div class="photo-card">
+<img src="heart.jpeg" alt="النوبة القلبية">
+</div>
+
+<p>أعراض النوبة القلبية قد تشمل ألمًا أو ضغطًا في الصدر، ضيق تنفس، تعرّق، غثيان، أو ألم يمتد للذراع أو الفك.</p>
+
+<div class="tip">
+اتصل بالإسعاف فورًا على 997 أو الطوارئ الموحد 911، ولا تنتظر زوال الأعراض.
+</div>
+</div>
+</div>
+
+</div>
+
+<a href="path.html" class="back">
+<i class="fas fa-arrow-right"></i>
+العودة للمسار
+</a>
+
+</div>
+
+<script>
+function toggleDrop(button){
+let item = button.parentElement;
+item.classList.toggle("active");
+}
+</script>
+
+</body>
+</html>

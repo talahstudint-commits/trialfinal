@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>بعد المشي</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+:root{--primary:#16a34a;--dark:#0f172a;--muted:#64748b;--glass:rgba(255,255,255,.78);}
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+font-family:'Cairo',sans-serif;
+min-height:100vh;
+padding:18px;
+color:var(--dark);
+background:
+radial-gradient(circle at top right,rgba(34,197,94,.22),transparent 35%),
+radial-gradient(circle at bottom left,rgba(20,184,166,.16),transparent 35%),
+linear-gradient(180deg,#f8fafc,#ecfdf5);
+}
+
+.page{max-width:760px;margin:auto;}
+
+.top{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:16px;
+}
+
+.brand{
+display:flex;
+align-items:center;
+gap:10px;
+font-weight:800;
+font-size:20px;
+}
+
+.brand img{
+width:50px;
+height:50px;
+border-radius:14px;
+}
+
+.back-small{
+width:42px;
+height:42px;
+border-radius:50%;
+background:#fff;
+display:flex;
+align-items:center;
+justify-content:center;
+text-decoration:none;
+color:var(--dark);
+box-shadow:0 8px 18px rgba(0,0,0,.08);
+}
+
+.hero{
+background:var(--glass);
+backdrop-filter:blur(12px);
+border-radius:26px;
+padding:22px;
+margin-bottom:16px;
+box-shadow:0 15px 30px rgba(0,0,0,.08);
+}
+
+.badge{
+display:inline-flex;
+align-items:center;
+gap:6px;
+background:#dcfce7;
+color:#15803d;
+padding:6px 12px;
+border-radius:999px;
+font-size:12px;
+font-weight:800;
+margin-bottom:12px;
+}
+
+.hero h1{font-size:28px;margin-bottom:6px;}
+.hero p{color:var(--muted);font-size:14px;line-height:1.6;}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:12px;
+}
+
+.card{
+background:var(--glass);
+backdrop-filter:blur(10px);
+border-radius:20px;
+padding:18px;
+box-shadow:0 10px 25px rgba(0,0,0,.06);
+}
+
+.card i{
+width:38px;
+height:38px;
+border-radius:14px;
+background:#dcfce7;
+color:var(--primary);
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:17px;
+margin-bottom:10px;
+}
+
+.card h3{font-size:17px;margin-bottom:6px;}
+.card p{font-size:13px;color:var(--muted);line-height:1.7;}
+
+.full{grid-column:span 2;}
+
+.start-test{
+display:flex;
+justify-content:center;
+align-items:center;
+gap:8px;
+margin-top:18px;
+padding:15px;
+background:var(--primary);
+color:white;
+border-radius:18px;
+text-decoration:none;
+font-weight:800;
+box-shadow:0 12px 25px rgba(22,163,74,.18);
+transition:.25s;
+}
+
+.start-test:hover{transform:translateY(-3px);}
+
+.back{
+display:flex;
+justify-content:center;
+align-items:center;
+gap:8px;
+margin-top:14px;
+padding:14px;
+background:var(--dark);
+color:white;
+border-radius:18px;
+text-decoration:none;
+font-weight:800;
+}
+
+@media(max-width:600px){
+.grid{grid-template-columns:1fr;}
+.full{grid-column:span 1;}
+.hero h1{font-size:24px;}
+}
+</style>
+</head>
+
+<body>
+
+<div class="page">
+
+<div class="top">
+<div class="brand">
+<img src="meras.jpeg" alt="شعار ممشى الحياة">
+<span>ممشى الحياة</span>
+</div>
+
+<a href="path.html" class="back-small">
+<i class="fas fa-arrow-right"></i>
+</a>
+</div>
+
+<section class="hero">
+<div class="badge">
+<i class="fas fa-check-circle"></i>
+نهاية المسار
+</div>
+<h1>بعد المشي</h1>
+<p>بعد الانتهاء من المشي، خذ دقائق بسيطة لتهدئة جسمك وشرب الماء وتقييم تجربتك.</p>
+</section>
+
+<div class="grid">
+
+<div class="card">
+<i class="fas fa-wind"></i>
+<h3>تمارين تهدئة</h3>
+<p>خفف سرعتك تدريجيًا، ثم قم بتمارين تمدد بسيطة للقدمين والساقين لمدة دقيقة أو دقيقتين.</p>
+</div>
+
+<div class="card">
+<i class="fas fa-bottle-water"></i>
+<h3>شرب الماء</h3>
+<p>اشرب كمية مناسبة من الماء بعد المشي لتعويض السوائل والحفاظ على نشاط جسمك.</p>
+</div>
+
+<div class="card full">
+<i class="fas fa-clipboard-check"></i>
+<h3>قيّم نفسك</h3>
+
+
+<a href="evaluation.html" class="start-test">
+<i class="fas fa-arrow-left"></i>
+ابدأ تقييم نفسك
+</a>
+</div>
+
+</div>
+
+<a href="path.html" class="back">
+<i class="fas fa-arrow-right"></i>
+العودة للمسار
+</a>
+
+</div>
+
+</body>
+</html>

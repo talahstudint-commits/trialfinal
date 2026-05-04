@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>التحديات الصحية</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800&display=swap" rel="stylesheet">
+
+<style>
+:root{
+--primary:#16a34a;
+--dark:#0f172a;
+--muted:#64748b;
+}
+
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+font-family:'Cairo',sans-serif;
+background:linear-gradient(180deg,#f8fafc,#ecfdf5);
+padding:18px;
+color:var(--dark);
+}
+
+.container{
+max-width:720px;
+margin:auto;
+}
+
+/* HEADER */
+.header{
+background:linear-gradient(135deg,#16a34a,#22c55e);
+color:white;
+padding:24px;
+border-radius:22px;
+text-align:center;
+margin-bottom:18px;
+}
+
+.header h1{
+font-size:24px;
+margin-bottom:6px;
+}
+
+/* CARD */
+.card{
+background:#fff;
+padding:18px;
+border-radius:18px;
+box-shadow:0 10px 20px rgba(0,0,0,.06);
+margin-bottom:14px;
+}
+
+.card h3{
+margin-bottom:8px;
+}
+
+.card p{
+font-size:14px;
+color:var(--muted);
+margin-bottom:12px;
+}
+
+/* BUTTON */
+.btn{
+width:100%;
+padding:12px;
+border:none;
+border-radius:14px;
+background:var(--primary);
+color:white;
+font-weight:800;
+cursor:pointer;
+margin-top:6px;
+}
+
+/* PROGRESS */
+.progress{
+margin-top:10px;
+font-weight:800;
+color:var(--primary);
+}
+
+/* BACK */
+.back{
+display:block;
+text-align:center;
+margin-top:18px;
+padding:14px;
+background:#e2e8f0;
+border-radius:14px;
+text-decoration:none;
+color:#111;
+font-weight:700;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="header">
+<h1>التحديات الصحية</h1>
+<p>ابدأ تحدي اليوم وارجع كل يوم تكمل هدفك</p>
+</div>
+
+<!-- تحدي 7 أيام -->
+<div class="card">
+<h3>🏃‍♂️ تحدي 7 أيام مشي</h3>
+<p>امشِ يوميًا لمدة 7 أيام متتالية</p>
+
+<button class="btn" onclick="addDay()">سجل اليوم</button>
+<div class="progress" id="days">0 / 7 أيام</div>
+</div>
+
+<!-- تحدي الماء -->
+<div class="card">
+<h3>💧 تحدي شرب الماء</h3>
+<p>اشرب 8 أكواب ماء يوميًا</p>
+
+<button class="btn" onclick="addWater()">شربت كوب</button>
+<div class="progress" id="water">0 / 8 أكواب</div>
+</div>
+
+<!-- تحدي الخطوات -->
+<div class="card">
+<h3>👣 تحدي الخطوات</h3>
+<p>هدفك 6000 خطوة يوميًا</p>
+
+<input type="number" id="stepsInput" placeholder="أدخل عدد خطواتك" style="width:100%;padding:10px;border-radius:10px;border:1px solid #ddd;">
+<button class="btn" onclick="checkSteps()">تحقق</button>
+
+<div class="progress" id="stepsResult">---</div>
+</div>
+
+<a href="index.html" class="back">⬅ العودة للرئيسية</a>
+
+</div>
+
+<script>
+
+// تحدي الأيام
+let days = 0;
+function addDay(){
+if(days < 7){
+days++;
+document.getElementById("days").innerText = days + " / 7 أيام";
+}
+}
+
+// الماء
+let water = 0;
+function addWater(){
+if(water < 8){
+water++;
+document.getElementById("water").innerText = water + " / 8 أكواب";
+}
+}
+
+// الخطوات
+function checkSteps(){
+let steps = document.getElementById("stepsInput").value;
+
+if(steps >= 6000){
+document.getElementById("stepsResult").innerText = "🔥 ممتاز! وصلت الهدف";
+}else{
+document.getElementById("stepsResult").innerText = "💪 حاول توصل 6000 خطوة";
+}
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ممشى الحياة الصحية</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+:root{
+--primary:#16a34a;
+--dark:#0f172a;
+--muted:#64748b;
+--card:#ffffff;
+}
+
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+font-family:'Cairo', sans-serif;
+background:linear-gradient(180deg,#f8fafc,#eef7f3);
+color:var(--dark);
+padding:20px;
+}
+
+/* LOGO */
+.logo{
+display:flex;
+align-items:center;
+gap:12px;
+font-weight:800;
+font-size:22px;
+margin-bottom:20px;
+}
+
+.logo img{
+width:60px;
+height:60px;
+border-radius:14px;
+}
+
+/* HERO */
+.hero{
+background:linear-gradient(135deg,#16a34a,#22c55e);
+color:white;
+padding:25px;
+border-radius:22px;
+box-shadow:0 15px 30px rgba(0,0,0,.08);
+margin-bottom:20px;
+}
+
+.hero h1{
+font-size:24px;
+margin-bottom:6px;
+}
+
+.hero p{
+font-size:14px;
+opacity:.9;
+}
+
+/* GRID */
+.grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:12px;
+}
+
+/* CARD */
+.card{
+background:var(--card);
+border-radius:18px;
+padding:16px;
+box-shadow:0 8px 20px rgba(0,0,0,.05);
+transition:.25s;
+position:relative;
+min-height:120px;
+text-decoration:none;
+color:inherit;
+display:block;
+}
+
+.card:hover{
+transform:translateY(-4px);
+box-shadow:0 12px 25px rgba(0,0,0,.08);
+}
+
+.card i{
+font-size:18px;
+color:var(--primary);
+margin-bottom:8px;
+}
+
+.card h3{
+font-size:16px;
+margin-bottom:4px;
+}
+
+.card p{
+font-size:12px;
+color:var(--muted);
+line-height:1.4;
+}
+
+.arrow{
+position:absolute;
+bottom:12px;
+left:12px;
+font-size:16px;
+color:var(--primary);
+}
+
+/* SOCIAL */
+.socials{
+margin-top:25px;
+display:flex;
+justify-content:center;
+gap:14px;
+}
+
+.socials a{
+width:42px;
+height:42px;
+display:flex;
+align-items:center;
+justify-content:center;
+border-radius:50%;
+background:#e2e8f0;
+color:#0f172a;
+font-size:16px;
+transition:.25s;
+}
+
+.socials a:hover{
+background:var(--primary);
+color:white;
+transform:scale(1.1);
+}
+</style>
+</head>
+
+<body>
+
+<!-- LOGO -->
+<div class="logo">
+<img src="meras.jpeg">
+<span>ممشى الحياة</span>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+<h1>ابدأ رحلتك الصحية</h1>
+<p>نساعدك تبني نمط حياة متوازن خطوة بخطوة بطريقة ممتعة وسهلة</p>
+</div>
+
+<!-- CARDS -->
+<div class="grid">
+
+<a href="path.html" class="card">
+<i class="fas fa-route"></i>
+<h3>المسار الصحي</h3>
+<p>ابدأ المشي خطوة بخطوة.</p>
+<div class="arrow">→</div>
+</a>
+
+<a href="daily.html" class="card">
+<i class="fas fa-heart"></i>
+<h3>الصحة اليومية</h3>
+<p>عادات بسيطة يومية.</p>
+<div class="arrow">→</div>
+</a>
+
+<a href="activity.html" class="card">
+<i class="fas fa-dumbbell"></i>
+<h3>النشاط البدني</h3>
+<p>فوائد المشي وأنواع التمارين.</p>
+<div class="arrow">→</div>
+</a>
+
+<a href="nutrition.html" class="card">
+<i class="fas fa-apple-alt"></i>
+<h3>التغذية</h3>
+<p>أساسيات الأكل + BMR.</p>
+<div class="arrow">→</div>
+</a>
+
+<a href="tools.html" class="card">
+<i class="fas fa-stethoscope"></i>
+<h3>الأدوات الصحية</h3>
+<p>حاسبات وروابط وزارة الصحة.</p>
+<div class="arrow">→</div>
+</a>
+
+<a href="firstaid.html" class="card">
+<i class="fas fa-briefcase-medical"></i>
+<h3>الإسعافات الأولية</h3>
+<p>تعلم التصرف في الطوارئ.</p>
+<div class="arrow">→</div>
+</a>
+
+<a href="awareness.html" class="card">
+<i class="fas fa-bolt"></i>
+<h3>التوعية السريعة</h3>
+<p>مقالات قصيرة ونصائح يومية.</p>
+<div class="arrow">→</div>
+</a>
+
+<a href="challenges.html" class="card">
+<i class="fas fa-trophy"></i>
+<h3>التحديات الصحية</h3>
+<p>ابدأ تحدي وارجع يوميًا.</p>
+<div class="arrow">→</div>
+</a>
+
+</div>
+
+<!-- SOCIAL -->
+<div class="socials">
+
+<a href="https://youtube.com/@healthypathsa?si=tdkne7hdC4A6ndR_" target="_blank" rel="noopener noreferrer">
+<i class="fab fa-youtube"></i>
+</a>
+
+<a href="https://www.instagram.com/khotwateam?igsh=MThzcTl4MjA2bjYyMA%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer">
+<i class="fab fa-instagram"></i>
+</a>
+
+<a href="https://x.com/healthypathsa?s=11" target="_blank" rel="noopener noreferrer">
+<i class="fab fa-x-twitter"></i>
+</a>
+
+<a href="https://www.tiktok.com/@healthywalksa?_r=1&_t=ZS-963zv9CPP0M" target="_blank" rel="noopener noreferrer">
+<i class="fab fa-tiktok"></i>
+</a>
+
+<a href="https://whatsapp.com/channel/0029Vb87hbu8V0tgp2zj3R3c" target="_blank" rel="noopener noreferrer">
+<i class="fab fa-whatsapp"></i>
+</a>
+
+</div>
+
+<p style="text-align:center; margin-top:10px; color:#64748b; font-size:13px;">
+تابعنا على جميع المنصات ⭐
+</p>
+
+</body>
+</html>

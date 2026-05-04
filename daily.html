@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>الصحة اليومية</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+:root{
+--primary:#16a34a;
+--dark:#0f172a;
+--muted:#64748b;
+--glass:rgba(255,255,255,.78);
+}
+
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+font-family:'Cairo',sans-serif;
+min-height:100vh;
+padding:18px;
+color:var(--dark);
+background:
+radial-gradient(circle at top right,rgba(34,197,94,.22),transparent 35%),
+linear-gradient(180deg,#f8fafc,#ecfdf5);
+}
+
+.page{max-width:760px;margin:auto;}
+
+/* TOP */
+.top{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:16px;
+}
+
+.brand{
+display:flex;
+align-items:center;
+gap:10px;
+font-weight:800;
+font-size:20px;
+}
+
+.brand img{
+width:50px;height:50px;border-radius:14px;
+}
+
+.back{
+width:42px;height:42px;border-radius:50%;
+background:#fff;display:flex;align-items:center;justify-content:center;
+text-decoration:none;color:var(--dark);
+box-shadow:0 8px 18px rgba(0,0,0,.08);
+}
+
+/* HERO */
+.hero{
+background:var(--glass);
+backdrop-filter:blur(12px);
+border-radius:26px;
+padding:22px;
+margin-bottom:16px;
+box-shadow:0 15px 30px rgba(0,0,0,.08);
+text-align:center;
+}
+
+.hero h1{font-size:28px;margin-bottom:6px;}
+.hero p{color:var(--muted);font-size:14px;line-height:1.6;}
+
+/* CARDS */
+.grid{
+display:grid;
+grid-template-columns:1fr;
+gap:14px;
+}
+
+.card{
+background:var(--glass);
+backdrop-filter:blur(10px);
+border-radius:20px;
+padding:18px;
+box-shadow:0 10px 25px rgba(0,0,0,.06);
+}
+
+.card i{
+width:42px;height:42px;border-radius:14px;
+background:#dcfce7;color:var(--primary);
+display:flex;align-items:center;justify-content:center;
+font-size:18px;margin-bottom:10px;
+}
+
+.card h3{
+font-size:17px;margin-bottom:8px;
+}
+
+.card p{
+font-size:13px;color:var(--muted);
+line-height:1.7;margin-bottom:8px;
+}
+
+/* HIGHLIGHT */
+.highlight{
+background:#f0fdf4;
+border-radius:14px;
+padding:10px;
+font-size:13px;
+color:#14532d;
+}
+
+/* FOOT NOTE */
+.note{
+margin-top:14px;
+font-size:12px;
+color:var(--muted);
+text-align:center;
+line-height:1.6;
+}
+
+@media(max-width:600px){
+.hero h1{font-size:24px;}
+}
+</style>
+</head>
+
+<body>
+
+<div class="page">
+
+<!-- TOP -->
+<div class="top">
+<div class="brand">
+<img src="meras.jpeg">
+<span>ممشى الحياة</span>
+</div>
+
+<a href="index.html" class="back">
+<i class="fas fa-arrow-right"></i>
+</a>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+<h1>الصحة اليومية</h1>
+<p>عادات بسيطة مدعومة بتوصيات صحية عالمية تساعدك تحافظ على جسمك ونشاطك يوميًا</p>
+</div>
+
+<!-- CONTENT -->
+<div class="grid">
+
+<div class="card">
+<i class="fas fa-moon"></i>
+<h3>النوم</h3>
+<p>يوصى بالنوم من 7 إلى 9 ساعات يوميًا للبالغين لدعم التركيز والمناعة وصحة القلب.</p>
+<div class="highlight">حاول تثبيت وقت النوم والاستيقاظ يوميًا لتحسين جودة النوم.</div>
+</div>
+
+<div class="card">
+<i class="fas fa-bottle-water"></i>
+<h3>شرب الماء</h3>
+<p>الحفاظ على الترطيب يساعد على تحسين الطاقة والتركيز وتنظيم حرارة الجسم.</p>
+<div class="highlight">اشرب الماء على فترات خلال اليوم، وليس فقط عند الشعور بالعطش.</div>
+</div>
+
+<div class="card">
+<i class="fas fa-person-walking"></i>
+<h3>الحركة اليومية</h3>
+<p>توصي منظمة الصحة العالمية بـ 150 دقيقة نشاط معتدل أسبوعيًا (مثل المشي).</p>
+<div class="highlight">حتى 10–15 دقيقة يوميًا تُحدث فرقًا إذا استمريت عليها.</div>
+</div>
+
+<div class="card">
+<i class="fas fa-leaf"></i>
+<h3>التغذية</h3>
+<p>تناول غذاء متوازن يشمل الخضار، الفواكه، البروتين، والحبوب الكاملة.</p>
+<div class="highlight">قلل السكريات والمشروبات المحلاة قدر الإمكان.</div>
+</div>
+
+<div class="card">
+<i class="fas fa-brain"></i>
+<h3>الصحة النفسية</h3>
+<p>تقليل التوتر يحسن جودة الحياة والنوم ويؤثر إيجابيًا على الجسم.</p>
+<div class="highlight">خذ دقائق يوميًا للتنفس العميق أو الاسترخاء.</div>
+</div>
+
+</div>
+
+<div class="note">
+هذه الإرشادات مبنية على توصيات صحية عامة (WHO و CDC)، وقد تختلف حسب الحالة الفردية.
+</div>
+
+</div>
+
+</body>
+</html>

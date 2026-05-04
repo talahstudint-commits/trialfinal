@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>تقييم نفسك</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+:root{--primary:#16a34a;--dark:#0f172a;--muted:#64748b;--glass:rgba(255,255,255,.78);}
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+font-family:'Cairo',sans-serif;
+min-height:100vh;
+padding:18px;
+color:var(--dark);
+background:
+radial-gradient(circle at top right,rgba(34,197,94,.22),transparent 35%),
+radial-gradient(circle at bottom left,rgba(20,184,166,.16),transparent 35%),
+linear-gradient(180deg,#f8fafc,#ecfdf5);
+}
+
+.page{max-width:760px;margin:auto;}
+
+.top{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:16px;
+}
+
+.brand{
+display:flex;
+align-items:center;
+gap:10px;
+font-weight:800;
+font-size:20px;
+}
+
+.brand img{
+width:50px;
+height:50px;
+border-radius:14px;
+}
+
+.back-small{
+width:42px;
+height:42px;
+border-radius:50%;
+background:#fff;
+display:flex;
+align-items:center;
+justify-content:center;
+text-decoration:none;
+color:var(--dark);
+box-shadow:0 8px 18px rgba(0,0,0,.08);
+}
+
+.hero,.card{
+background:var(--glass);
+backdrop-filter:blur(12px);
+border-radius:24px;
+padding:20px;
+margin-bottom:14px;
+box-shadow:0 12px 28px rgba(0,0,0,.07);
+}
+
+.badge{
+display:inline-flex;
+align-items:center;
+gap:6px;
+background:#dcfce7;
+color:#15803d;
+padding:6px 12px;
+border-radius:999px;
+font-size:12px;
+font-weight:800;
+margin-bottom:12px;
+}
+
+.hero h1{font-size:28px;margin-bottom:6px;}
+.hero p{color:var(--muted);font-size:14px;line-height:1.7;}
+
+.label{
+font-weight:800;
+color:var(--primary);
+margin-bottom:10px;
+display:flex;
+align-items:center;
+gap:6px;
+}
+
+.input-group{margin-bottom:12px;}
+
+.input-group label{
+font-size:13px;
+font-weight:700;
+color:#334155;
+}
+
+input,select{
+width:100%;
+padding:13px;
+border-radius:14px;
+border:1px solid #dbe2ea;
+margin-top:6px;
+font-family:'Cairo',sans-serif;
+font-size:15px;
+outline:none;
+background:white;
+}
+
+input:focus,select:focus{
+border-color:var(--primary);
+box-shadow:0 0 0 3px rgba(22,163,74,.12);
+}
+
+button{
+width:100%;
+margin-top:8px;
+padding:14px;
+border:none;
+border-radius:16px;
+background:var(--primary);
+color:white;
+font-family:'Cairo',sans-serif;
+font-size:15px;
+font-weight:800;
+cursor:pointer;
+transition:.25s;
+}
+
+button:hover{
+transform:translateY(-3px);
+box-shadow:0 10px 20px rgba(22,163,74,.2);
+}
+
+.result{
+display:none;
+margin-top:14px;
+padding:18px;
+border-radius:20px;
+background:#dcfce7;
+color:#14532d;
+line-height:1.8;
+box-shadow:0 8px 18px rgba(0,0,0,.05);
+}
+
+.result h2{
+font-size:22px;
+margin-bottom:8px;
+}
+
+.stats{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:10px;
+margin:12px 0;
+}
+
+.stat{
+background:white;
+border-radius:16px;
+padding:12px;
+text-align:center;
+}
+
+.stat span{
+display:block;
+font-size:12px;
+color:#64748b;
+}
+
+.stat strong{
+font-size:22px;
+color:#0f172a;
+}
+
+.feedback{
+background:white;
+border-radius:16px;
+padding:13px;
+margin-top:10px;
+color:#334155;
+font-size:14px;
+}
+
+.back{
+display:flex;
+justify-content:center;
+align-items:center;
+gap:8px;
+margin-top:16px;
+padding:14px;
+background:var(--dark);
+color:white;
+border-radius:18px;
+text-decoration:none;
+font-weight:800;
+}
+
+@media(max-width:600px){
+.hero h1{font-size:24px;}
+.stats{grid-template-columns:1fr;}
+}
+</style>
+</head>
+
+<body>
+
+<div class="page">
+
+<div class="top">
+<div class="brand">
+<img src="meras.jpeg" alt="شعار ممشى الحياة">
+<span>ممشى الحياة</span>
+</div>
+
+<a href="after.html" class="back-small">
+<i class="fas fa-arrow-right"></i>
+</a>
+</div>
+
+<section class="hero">
+<div class="badge">
+<i class="fas fa-star"></i>
+تقييم النفس
+</div>
+<h1>قيّم مشيك اليوم</h1>
+
+</section>
+
+<div class="card">
+<div class="label">
+<i class="fas fa-clipboard-list"></i>
+بيانات المشي
+</div>
+
+<div class="input-group">
+<label>الجنس</label>
+<select id="gender">
+<option value="female">أنثى</option>
+<option value="male">ذكر</option>
+</select>
+</div>
+
+<div class="input-group">
+<label>مدة المشي بالدقائق</label>
+<input type="number" id="minutes" placeholder="مثال: 20">
+</div>
+
+<div class="input-group">
+<label>شعورك بعد المشي</label>
+<select id="feeling">
+<option value="good">ممتاز / نشيط</option>
+<option value="normal">طبيعي</option>
+<option value="tired">تعبان</option>
+</select>
+</div>
+
+<div class="input-group">
+<label>مستوى المجهود</label>
+<select id="effort">
+<option value="light">خفيف</option>
+<option value="medium">متوسط</option>
+<option value="high">عالي</option>
+</select>
+</div>
+
+<button onclick="evaluateWalk()">اعرض التقييم</button>
+
+<div class="result" id="result"></div>
+</div>
+
+<a href="after.html" class="back">
+<i class="fas fa-arrow-right"></i>
+العودة لصفحة بعد المشي
+</a>
+
+</div>
+
+<script>
+function evaluateWalk(){
+let gender = document.getElementById("gender").value;
+let minutes = Number(document.getElementById("minutes").value);
+let feeling = document.getElementById("feeling").value;
+let effort = document.getElementById("effort").value;
+let result = document.getElementById("result");
+
+if(minutes <= 0){
+result.style.display = "block";
+result.innerHTML = "الرجاء إدخال مدة صحيحة للمشي.";
+return;
+}
+
+let caloriesPerMinute = 5;
+
+if(effort === "light"){
+caloriesPerMinute = 4;
+}
+else if(effort === "medium"){
+caloriesPerMinute = 5;
+}
+else{
+caloriesPerMinute = 7;
+}
+
+let calories = Math.round(minutes * caloriesPerMinute);
+let steps = Math.round(minutes * 110);
+
+let healthStatus = "";
+let encouragement = "";
+let feedback = "";
+
+if(gender === "female"){
+
+if(minutes < 10){
+healthStatus = "بداية جيدة";
+encouragement = "أنتِ بدأتي خطوة جميلة نحو صحة أفضل 👏";
+feedback = "حاولي زيادة مدة المشي تدريجيًا حتى تصلين إلى 15 دقيقة. المهم هو الاستمرار وليس الكمال.";
+}
+else if(minutes >= 10 && minutes < 30){
+healthStatus = "أداء ممتاز";
+encouragement = "ممتاز! أنتِ على الطريق الصحيح 💪";
+feedback = "استمري على هذا المستوى، ومع الوقت حاولي زيادة المدة أو السرعة بشكل بسيط.";
+}
+else{
+healthStatus = "إنجاز قوي";
+encouragement = "رائع جدًا! حققتِ إنجازًا يستحق الفخر 🔥";
+feedback = "اهتمي بالتهدئة وشرب الماء بعد هذا المجهود، وخذي راحة كافية حتى يتعافى جسمك.";
+}
+
+if(feeling === "tired"){
+feedback += " وبما أنكِ تشعرين بالتعب، خففي المجهود في المرة القادمة وركزي على التنفس وشرب الماء.";
+}
+else if(feeling === "good"){
+feedback += " شعوركِ بالنشاط علامة ممتازة، استمري على هذا الروتين الجميل.";
+}
+
+}
+else{
+
+if(minutes < 10){
+healthStatus = "بداية جيدة";
+encouragement = "أنت بدأت خطوة ممتازة نحو صحة أفضل 👏";
+feedback = "حاول زيادة مدة المشي تدريجيًا حتى تصل إلى 15 دقيقة. المهم هو الاستمرار وليس الكمال.";
+}
+else if(minutes >= 10 && minutes < 30){
+healthStatus = "أداء ممتاز";
+encouragement = "ممتاز! أنت على الطريق الصحيح 💪";
+feedback = "استمر على هذا المستوى، ومع الوقت حاول زيادة المدة أو السرعة بشكل بسيط.";
+}
+else{
+healthStatus = "إنجاز قوي";
+encouragement = "رائع جدًا! حققت إنجازًا يستحق الفخر 🔥";
+feedback = "اهتم بالتهدئة وشرب الماء بعد هذا المجهود، وخذ راحة كافية حتى يتعافى جسمك.";
+}
+
+if(feeling === "tired"){
+feedback += " وبما أنك تشعر بالتعب، خفف المجهود في المرة القادمة وركز على التنفس وشرب الماء.";
+}
+else if(feeling === "good"){
+feedback += " شعورك بالنشاط علامة ممتازة، استمر على هذا الروتين الجميل.";
+}
+
+}
+
+result.style.display = "block";
+result.innerHTML =
+"<h2>" + healthStatus + "</h2>" +
+"<p>" + encouragement + "</p>" +
+"<div class='stats'>" +
+"<div class='stat'><span>السعرات التقريبية</span><strong>" + calories + "</strong></div>" +
+"<div class='stat'><span>الخطوات التقريبية</span><strong>" + steps + "</strong></div>" +
+"</div>" +
+"<div class='feedback'><strong>تقييمك:</strong><br>" + feedback + "</div>";
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>التغذية</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+:root{
+--primary:#16a34a;
+--dark:#0f172a;
+--muted:#64748b;
+--glass:rgba(255,255,255,.78);
+}
+
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+font-family:'Cairo', sans-serif;
+min-height:100vh;
+padding:18px;
+color:var(--dark);
+background:
+radial-gradient(circle at top right, rgba(34,197,94,.2), transparent 35%),
+linear-gradient(180deg,#f8fafc,#ecfdf5);
+}
+
+.page{max-width:760px;margin:auto;}
+
+.top{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:16px;
+}
+
+.brand{
+display:flex;
+align-items:center;
+gap:10px;
+font-weight:800;
+}
+
+.brand img{
+width:50px;
+height:50px;
+border-radius:14px;
+}
+
+.back{
+width:42px;
+height:42px;
+border-radius:50%;
+background:#fff;
+display:flex;
+align-items:center;
+justify-content:center;
+text-decoration:none;
+color:var(--dark);
+box-shadow:0 8px 18px rgba(0,0,0,.08);
+}
+
+.hero{
+background:var(--glass);
+backdrop-filter:blur(12px);
+border-radius:26px;
+padding:22px;
+margin-bottom:16px;
+box-shadow:0 15px 30px rgba(0,0,0,.08);
+text-align:center;
+}
+
+.hero h1{
+font-size:28px;
+margin-bottom:6px;
+}
+
+.hero p{
+color:var(--muted);
+font-size:14px;
+line-height:1.7;
+}
+
+.card{
+background:var(--glass);
+backdrop-filter:blur(10px);
+border-radius:20px;
+padding:18px;
+margin-bottom:12px;
+box-shadow:0 10px 25px rgba(0,0,0,.06);
+}
+
+.card i{
+width:42px;
+height:42px;
+border-radius:14px;
+background:#dcfce7;
+color:var(--primary);
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:18px;
+margin-bottom:10px;
+}
+
+.card h3{
+font-size:18px;
+margin-bottom:8px;
+}
+
+.card p,
+.card li{
+font-size:13px;
+color:#334155;
+line-height:1.8;
+}
+
+ul{
+padding-right:18px;
+}
+
+.meals{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:10px;
+}
+
+.meal{
+background:#fff;
+border-radius:16px;
+padding:14px;
+box-shadow:0 8px 18px rgba(0,0,0,.04);
+}
+
+.meal h4{
+font-size:15px;
+margin-bottom:6px;
+color:var(--dark);
+}
+
+.input-group{
+margin-bottom:12px;
+}
+
+.input-group label{
+font-size:13px;
+font-weight:800;
+color:#334155;
+}
+
+input,
+select{
+width:100%;
+padding:13px;
+border-radius:14px;
+border:1px solid #dbe2ea;
+margin-top:6px;
+font-family:'Cairo',sans-serif;
+font-size:15px;
+outline:none;
+background:white;
+}
+
+input:focus,
+select:focus{
+border-color:var(--primary);
+box-shadow:0 0 0 3px rgba(22,163,74,.12);
+}
+
+button{
+width:100%;
+padding:14px;
+border:none;
+border-radius:16px;
+background:var(--primary);
+color:white;
+font-family:'Cairo',sans-serif;
+font-size:15px;
+font-weight:800;
+cursor:pointer;
+transition:.25s;
+}
+
+button:hover{
+transform:translateY(-3px);
+box-shadow:0 10px 20px rgba(22,163,74,.2);
+}
+
+.result{
+margin-top:14px;
+padding:14px;
+border-radius:16px;
+background:#dcfce7;
+color:#14532d;
+font-weight:800;
+line-height:1.8;
+text-align:center;
+}
+
+.note{
+font-size:12px;
+color:var(--muted);
+line-height:1.7;
+margin-top:10px;
+text-align:center;
+}
+
+.back-main{
+display:flex;
+justify-content:center;
+align-items:center;
+gap:8px;
+margin-top:18px;
+padding:14px;
+background:var(--dark);
+color:white;
+border-radius:18px;
+text-decoration:none;
+font-weight:800;
+}
+
+@media(max-width:600px){
+.hero h1{font-size:24px;}
+.meals{grid-template-columns:1fr;}
+}
+</style>
+</head>
+
+<body>
+
+<div class="page">
+
+<div class="top">
+<div class="brand">
+<img src="meras.jpeg" alt="شعار ممشى الحياة">
+<span>ممشى الحياة</span>
+</div>
+
+<a href="index.html" class="back">
+<i class="fas fa-arrow-right"></i>
+</a>
+</div>
+
+<section class="hero">
+<h1>التغذية</h1>
+<p>أساسيات بسيطة تساعدك تختار أكلك بوعي بدون تعقيد أو حمية قاسية</p>
+</section>
+
+<div class="card">
+<i class="fas fa-apple-alt"></i>
+<h3>أساسيات التغذية</h3>
+<ul>
+<li>اجعل وجبتك متوازنة: بروتين + كربوهيدرات مفيدة + خضار أو فاكهة.</li>
+<li>لا تحتاج إلى منع كامل، ركز على التوازن والكميات المناسبة.</li>
+<li>اختر الأكل القريب من الطبيعي مثل البيض، الدجاج، الرز، الشوفان، الخضار، والفواكه.</li>
+<li>اشرب الماء وقلل المشروبات المحلاة قدر الإمكان.</li>
+</ul>
+</div>
+
+<div class="card">
+<i class="fas fa-fire"></i>
+<h3>السعرات ببساطة</h3>
+<p>
+السعرات هي الطاقة التي يحصل عليها جسمك من الطعام. إذا أكلت أكثر من احتياجك يزيد الوزن غالبًا،
+وإذا أكلت أقل من احتياجك ينقص الوزن غالبًا. الهدف ليس التجويع، بل معرفة احتياجك واختيار وجبات مشبعة.
+</p>
+</div>
+
+<div class="card">
+<i class="fas fa-calculator"></i>
+<h3>حاسبة BMR</h3>
+<p>احسب معدل الحرق الأساسي، وهو تقدير للسعرات التي يحتاجها جسمك في الراحة.</p>
+
+<div class="input-group">
+<label>الجنس</label>
+<select id="gender">
+<option value="female">أنثى</option>
+<option value="male">ذكر</option>
+</select>
+</div>
+
+<div class="input-group">
+<label>الوزن بالكيلو</label>
+<input type="number" id="weight" placeholder="مثال: 55">
+</div>
+
+<div class="input-group">
+<label>الطول بالسنتيمتر</label>
+<input type="number" id="height" placeholder="مثال: 165">
+</div>
+
+<div class="input-group">
+<label>العمر</label>
+<input type="number" id="age" placeholder="مثال: 20">
+</div>
+
+<button onclick="calculateBMR()">احسب BMR</button>
+
+<div class="result" id="bmrResult">النتيجة ستظهر هنا</div>
+
+<div class="note">
+النتيجة تقديرية، والاحتياج الحقيقي يختلف حسب النشاط اليومي والحالة الصحية.
+</div>
+</div>
+
+<div class="card">
+<i class="fas fa-bowl-food"></i>
+<h3>أمثلة بسيطة لوجبات صحية</h3>
+
+<div class="meals">
+
+<div class="meal">
+<h4>فطور</h4>
+<p>بيض + خبز أسمر + خضار أو فاكهة.</p>
+</div>
+
+<div class="meal">
+<h4>غداء</h4>
+<p>دجاج أو تونة + رز أو بطاطس + سلطة.</p>
+</div>
+
+<div class="meal">
+<h4>سناك</h4>
+<p>زبادي + فاكهة، أو حفنة مكسرات.</p>
+</div>
+
+<div class="meal">
+<h4>عشاء</h4>
+<p>ساندويتش بروتين خفيف أو شوربة مع سلطة.</p>
+</div>
+
+</div>
+</div>
+
+<a href="index.html" class="back-main">
+<i class="fas fa-arrow-right"></i>
+العودة للرئيسية
+</a>
+
+</div>
+
+<script>
+function calculateBMR(){
+let gender = document.getElementById("gender").value;
+let weight = Number(document.getElementById("weight").value);
+let height = Number(document.getElementById("height").value);
+let age = Number(document.getElementById("age").value);
+let result = document.getElementById("bmrResult");
+
+if(weight <= 0 || height <= 0 || age <= 0){
+result.innerHTML = "الرجاء إدخال الوزن والطول والعمر بشكل صحيح";
+return;
+}
+
+let bmr = 0;
+
+if(gender === "male"){
+bmr = 10 * weight + 6.25 * height - 5 * age + 5;
+}else{
+bmr = 10 * weight + 6.25 * height - 5 * age - 161;
+}
+
+let roundedBMR = Math.round(bmr);
+
+result.innerHTML =
+"معدل الحرق الأساسي تقريبًا: " + roundedBMR + " سعرة يوميًا<br>" +
+"هذا رقم البداية فقط، ومع الحركة اليومية يزيد احتياجك.";
+}
+</script>
+
+</body>
+</html>

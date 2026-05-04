@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>قسم المسار الصحي</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+:root{
+--primary:#16a34a;
+--dark:#0f172a;
+--muted:#64748b;
+--card:#ffffff;
+}
+
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+font-family:'Cairo', sans-serif;
+background:linear-gradient(180deg,#f8fafc,#eef7f3);
+color:var(--dark);
+padding:20px;
+}
+
+/* LOGO */
+.logo{
+display:flex;
+align-items:center;
+gap:12px;
+font-weight:800;
+font-size:22px;
+margin-bottom:10px;
+}
+
+.logo img{
+width:60px;
+height:60px;
+border-radius:14px;
+}
+
+/* HOME BUTTON */
+.home-btn{
+display:flex;
+align-items:center;
+justify-content:center;
+gap:8px;
+background:#e2e8f0;
+color:#0f172a;
+padding:12px;
+border-radius:14px;
+text-decoration:none;
+font-weight:700;
+margin-bottom:16px;
+transition:.25s;
+}
+
+.home-btn:hover{
+background:#cbd5e1;
+transform:translateY(-2px);
+}
+
+/* HERO */
+.hero{
+background:linear-gradient(135deg,#16a34a,#22c55e);
+color:white;
+padding:25px;
+border-radius:22px;
+box-shadow:0 15px 30px rgba(0,0,0,.08);
+margin-bottom:20px;
+}
+
+.hero h1{
+font-size:24px;
+margin-bottom:6px;
+}
+
+.hero p{
+font-size:14px;
+opacity:.9;
+}
+
+/* GRID */
+.grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:12px;
+}
+
+/* CARD */
+.card{
+background:var(--card);
+border-radius:18px;
+padding:16px;
+box-shadow:0 8px 20px rgba(0,0,0,.05);
+transition:.25s;
+cursor:pointer;
+position:relative;
+overflow:hidden;
+min-height:120px;
+text-decoration:none;
+color:inherit;
+}
+
+.card:hover{
+transform:translateY(-4px);
+box-shadow:0 12px 25px rgba(0,0,0,.08);
+}
+
+.card i{
+font-size:18px;
+color:var(--primary);
+margin-bottom:8px;
+}
+
+.card h3{
+font-size:16px;
+margin-bottom:4px;
+}
+
+.card p{
+font-size:12px;
+color:var(--muted);
+line-height:1.4;
+}
+
+.arrow{
+position:absolute;
+bottom:12px;
+left:12px;
+font-size:16px;
+color:var(--primary);
+}
+
+/* SHARE SECTION */
+.share-section{
+margin-top:30px;
+}
+
+.share-card{
+background:linear-gradient(135deg,#16a34a,#22c55e);
+color:white;
+padding:25px;
+border-radius:24px;
+text-align:center;
+box-shadow:0 18px 35px rgba(22,163,74,.2);
+}
+
+.share-card h2{
+font-size:22px;
+margin-bottom:6px;
+}
+
+.share-card p{
+font-size:14px;
+opacity:.9;
+margin-bottom:14px;
+}
+
+.hashtag{
+background:rgba(255,255,255,.2);
+padding:10px;
+border-radius:14px;
+font-weight:800;
+margin-bottom:14px;
+}
+
+.share-btn,
+.survey-btn{
+width:100%;
+display:flex;
+justify-content:center;
+align-items:center;
+gap:8px;
+padding:14px;
+border:none;
+border-radius:16px;
+font-family:'Cairo',sans-serif;
+font-size:15px;
+font-weight:800;
+cursor:pointer;
+margin-top:8px;
+text-decoration:none;
+}
+
+.share-btn{
+background:white;
+color:#16a34a;
+}
+
+.survey-btn{
+background:#0f172a;
+color:white;
+}
+
+.share-btn:hover,
+.survey-btn:hover{
+transform:translateY(-3px);
+}
+
+/* RESPONSIVE */
+@media(max-width:700px){
+.grid{
+grid-template-columns:repeat(2,1fr);
+gap:10px;
+}
+}
+</style>
+</head>
+
+<body>
+
+<!-- LOGO -->
+<div class="logo">
+<img src="meras.jpeg">
+<span>ممشى الحياة</span>
+</div>
+
+<!-- HOME BUTTON -->
+<a href="index.html" class="home-btn">
+<i class="fas fa-house"></i>
+العودة للرئيسية
+</a>
+
+<!-- HERO -->
+<div class="hero">
+<h1>قسم المسار الصحي</h1>
+<p>كل ما تحتاجه قبل وأثناء وبعد المشي</p>
+</div>
+
+<!-- CARDS -->
+<div class="grid">
+
+<a href="start.html" class="card">
+<i class="fas fa-play"></i>
+<h3>ابدأ المشي</h3>
+<p>تهيئة جسمك قبل الانطلاق</p>
+<div class="arrow">→</div>
+</a>
+
+<a href="during.html" class="card">
+<i class="fas fa-person-walking"></i>
+<h3>أثناء المشي</h3>
+<p>تابع نشاطك بشكل مباشر</p>
+<div class="arrow">→</div>
+</a>
+
+<a href="bmi.html" class="card">
+<i class="fas fa-calculator"></i>
+<h3>احسب صحتك</h3>
+<p>تعرف على مؤشر كتلة جسمك</p>
+<div class="arrow">→</div>
+</a>
+
+<a href="emergency.html" class="card">
+<i class="fas fa-triangle-exclamation"></i>
+<h3>الطوارئ</h3>
+<p>تعلم كيف تتصرف بسرعة</p>
+<div class="arrow">→</div>
+</a>
+
+<a href="tips.html" class="card">
+<i class="fas fa-bolt"></i>
+<h3>نصائح سريعة</h3>
+<p>نصيحة بسيطة كل مرة</p>
+<div class="arrow">→</div>
+</a>
+
+<a href="after.html" class="card">
+<i class="fas fa-check-circle"></i>
+<h3>بعد المشي</h3>
+<p>تهدئة الجسم وتقييم نفسك</p>
+<div class="arrow">→</div>
+</a>
+
+</div>
+
+<!-- SHARE SECTION -->
+<section class="share-section">
+
+<div class="share-card">
+
+<h2>شارك تجربتك</h2>
+<p>انشر تجربتك وساعد غيرك يبدأ رحلته الصحية 🌱</p>
+
+<div class="hashtag">
+#ممشى_الحياة
+</div>
+
+<button class="share-btn" onclick="shareExperience()">
+<i class="fas fa-share-nodes"></i>
+مشاركة التجربة
+</button>
+
+<a href="https://your-form-link.com" target="_blank" class="survey-btn">
+<i class="fas fa-clipboard"></i>
+تعبئة الاستبيان
+</a>
+
+</div>
+
+</section>
+
+<script>
+function shareExperience(){
+if(navigator.share){
+navigator.share({
+title:"ممشى الحياة",
+text:"شاركت تجربتي في ممشى الحياة 🚶‍♀️✨",
+url:window.location.href
+});
+}else{
+alert("يمكنك نسخ الرابط ومشاركته يدويًا");
+}
+}
+</script>
+
+</body>
+</html>

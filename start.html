@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ابدأ المشي</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+:root{
+--primary:#16a34a;
+--dark:#0f172a;
+--muted:#64748b;
+--glass:rgba(255,255,255,.78);
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Cairo', sans-serif;
+min-height:100vh;
+color:var(--dark);
+padding:18px;
+background:
+radial-gradient(circle at top right, rgba(34,197,94,.24), transparent 35%),
+radial-gradient(circle at bottom left, rgba(20,184,166,.18), transparent 35%),
+linear-gradient(180deg,#f8fafc,#ecfdf5);
+}
+
+/* PAGE */
+.page{
+max-width:760px;
+margin:auto;
+}
+
+/* TOP BAR */
+.top{
+display:flex;
+align-items:center;
+justify-content:space-between;
+margin-bottom:18px;
+}
+
+.brand{
+display:flex;
+align-items:center;
+gap:10px;
+font-weight:800;
+font-size:20px;
+}
+
+.brand img{
+width:50px;
+height:50px;
+border-radius:14px;
+box-shadow:0 8px 18px rgba(0,0,0,.1);
+}
+
+.back-small{
+width:44px;
+height:44px;
+border-radius:50%;
+background:white;
+display:flex;
+align-items:center;
+justify-content:center;
+text-decoration:none;
+color:var(--dark);
+box-shadow:0 8px 18px rgba(0,0,0,.08);
+}
+
+/* HERO CARD */
+.hero{
+background:rgba(255,255,255,.72);
+backdrop-filter:blur(12px);
+border:1px solid rgba(255,255,255,.7);
+border-radius:28px;
+padding:22px;
+box-shadow:0 18px 40px rgba(0,0,0,.08);
+margin-bottom:16px;
+}
+
+.badge{
+display:inline-flex;
+align-items:center;
+gap:6px;
+background:#dcfce7;
+color:#15803d;
+padding:6px 12px;
+border-radius:999px;
+font-size:12px;
+font-weight:800;
+margin-bottom:12px;
+}
+
+.hero h1{
+font-size:30px;
+margin-bottom:6px;
+}
+
+.hero p{
+color:var(--muted);
+font-size:14px;
+line-height:1.6;
+}
+
+/* IMAGE FEATURE */
+.image-card{
+margin-top:18px;
+position:relative;
+border-radius:24px;
+overflow:hidden;
+box-shadow:0 16px 35px rgba(0,0,0,.16);
+}
+
+.image-card img{
+width:100%;
+height:auto; /* مهم */
+object-fit:contain; /* ما يقص */
+}
+
+.image-caption{
+position:absolute;
+right:14px;
+bottom:14px;
+left:14px;
+background:rgba(15,23,42,.72);
+color:white;
+padding:12px 14px;
+border-radius:18px;
+backdrop-filter:blur(8px);
+font-size:13px;
+}
+
+/* INFO GRID */
+.info-grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:12px;
+margin-top:16px;
+}
+
+.info{
+background:var(--glass);
+backdrop-filter:blur(12px);
+border:1px solid rgba(255,255,255,.75);
+border-radius:22px;
+padding:18px;
+box-shadow:0 10px 25px rgba(0,0,0,.06);
+}
+
+.info i{
+width:36px;
+height:36px;
+border-radius:12px;
+background:#dcfce7;
+color:var(--primary);
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:16px;
+margin-bottom:10px;
+}
+
+.info h3{
+font-size:16px;
+margin-bottom:5px;
+}
+
+.info p{
+font-size:13px;
+color:var(--muted);
+line-height:1.6;
+}
+
+/* BIG BACK */
+.back{
+display:flex;
+align-items:center;
+justify-content:center;
+gap:8px;
+margin-top:20px;
+padding:15px;
+background:var(--dark);
+color:white;
+border-radius:18px;
+text-decoration:none;
+font-weight:800;
+box-shadow:0 12px 25px rgba(15,23,42,.18);
+transition:.25s;
+}
+
+.back:hover{
+transform:translateY(-3px);
+}
+
+/* MOBILE */
+@media(max-width:600px){
+body{
+padding:14px;
+}
+
+.hero{
+padding:18px;
+border-radius:24px;
+}
+
+.hero h1{
+font-size:25px;
+}
+
+.image-card img{
+height:260px;
+}
+
+.info-grid{
+grid-template-columns:1fr;
+}
+
+.brand span{
+font-size:18px;
+}
+}
+</style>
+</head>
+
+<body>
+
+<div class="page">
+
+<div class="top">
+    <div class="brand">
+        <img src="meras.jpeg" alt="شعار ممشى الحياة">
+        <span>ممشى الحياة</span>
+    </div>
+
+    <a href="path.html" class="back-small">
+        <i class="fas fa-arrow-right"></i>
+    </a>
+</div>
+
+<section class="hero">
+    <div class="badge">
+        <i class="fas fa-shoe-prints"></i>
+        قبل المشي
+    </div>
+
+    <h1>ابدأ المشي</h1>
+    <p>قبل الانطلاق، جهّز جسمك بحركات بسيطة تساعدك تمشي براحة وتقلل احتمالية الإصابة.</p>
+
+    <div class="image-card">
+        <img src="warm.jpeg" alt="تمارين الإحماء">
+        <div class="image-caption">
+            ابدأ بإحماء خفيف لمدة قصيرة قبل المشي.
+        </div>
+    </div>
+</section>
+
+<div class="info-grid">
+
+    <div class="info">
+        <i class="fas fa-fire"></i>
+        <h3>تمارين الإحماء</h3>
+        <p>حرّك جسمك تدريجيًا قبل المشي حتى تكون عضلاتك جاهزة.</p>
+    </div>
+
+    <div class="info">
+        <i class="fas fa-clock"></i>
+        <h3>مدة الإحماء</h3>
+        <p>من 1 إلى 2 دقيقة كافية كبداية بسيطة قبل الانطلاق.</p>
+    </div>
+
+    <div class="info">
+        <i class="fas fa-lightbulb"></i>
+        <h3>نصيحة</h3>
+        <p>لا تبدأ بسرعة عالية، ارفع الإيقاع تدريجيًا خلال أول دقائق.</p>
+    </div>
+
+    <div class="info">
+        <i class="fas fa-heart-pulse"></i>
+        <h3>سلامتك أولًا</h3>
+        <p>إذا شعرت بدوخة أو ألم غير طبيعي، توقف وخذ راحة.</p>
+    </div>
+
+</div>
+
+<a href="path.html" class="back">
+    <i class="fas fa-arrow-right"></i>
+    العودة للمسار
+</a>
+
+</div>
+
+</body>
+</html>
+</html>
